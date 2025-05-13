@@ -110,3 +110,26 @@ footer {
   background-color: #ff0050;
 }
   
+.apresentacao {
+  background-color: #1a1a1a;
+  border-left: 6px solid #800080;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(128, 0, 128, 0.3);
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.apresentacao h2 {
+  color: #ffccff;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.apresentacao strong {
+  color: #b84dff;
+}
