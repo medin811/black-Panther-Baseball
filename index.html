@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Black Panther Baseball</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -13,67 +13,136 @@
   </header>
 
   <nav>
-    <a href="#integrantes">Integrantes</a>
-    <a href="#jogos">Jogos</a>
-    <a href="#estatisticas">Estatísticas</a>
-    <a href="#noticias">Notícias</a>
-    <a href="#contato">Contato</a>
-    <a href="https://instagram.com/" target="_blank">Instagram</a>
+    <ul>
+      <li><a href="#lideres">Líderes</a></li>
+      <li><a href="#jogadores">Jogadores</a></li>
+      <li><a href="#jogos">Jogos</a></li>
+      <li><a href="#estatisticas">Estatísticas</a></li>
+      <li><a href="#noticias">Notícias</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
   </nav>
 
-  <section class="apresentacao">
-    <h2>🏆 Seja parte da família Black Panther Baseball!</h2>
-    <p>
-      O Black Panther Baseball convida você a fazer parte desta grande família!<br>
-      Somos uma equipe de beisebol amadora, que acolhe desde iniciantes até veteranos apaixonados pelo esporte.
-    </p>
-    <p>
-      Aqui você encontrará uma oportunidade incrível de desenvolver seu talento, fazer novas amizades e cuidar da saúde mental e física.
-    </p>
-    <p>
-      📞 <strong>Entre em contato</strong> para mais informações e venha viver a emoção do beisebol com a gente!
-    </p>
+  <section id="lideres">
+    <h2>Líderes do Time</h2>
+    <div class="lideres-container">
+      <div class="lider">
+        <img src="images/ramon.jpg/WhatsApp Image 2025-05-13 at 23.12.52.png" alt="Ramon" class="lider-img">
+        <p><strong>Ramon</strong><br>Líder</p>
+      </div>
+      <div class="lider">
+        <img src="images/miguel/WhatsApp Image 2025-05-13 at 22.56.54.png" alt="Miguel" class="lider-img">
+        <p><strong>Miguel</strong><br>Líder</p>
+      </div>
+      <div class="lider">
+        <img src="images/wilber/WhatsApp Image 2025-05-13 at 22.56.54 (1).png" alt="Wilber" class="lider-img">
+        <p><strong>Wilber</strong><br>Líder</p>
+      </div>
+      <div class="lider">
+        <img src="images/angel/WhatsApp Image 2025-05-13 at 22.57.08.png" alt="Angel" class="lider-img">
+        <p><strong>Angel</strong><br>Controlador das Redes e Sistema</p>
+      </div>
+    </div>
   </section>
 
-  <section id="integrantes">
-    <h2>Integrantes do Time</h2>
-    <ul>
-      <li>Ramon - Líder</li>
-      <li>Miguel - Líder</li>
-      <li>Wilber - Líder</li>
-      <li>Angel - Controlador das Redes do time e Sistema</li>
-    </ul>
-  </section>
+  <section id="jogadores">
+    <h2>Jogadores</h2>
+    <!-- Formulário para adicionar jogador -->
+    <form id="formJogadores" onsubmit="adicionarJogador(event)">
+        <input type="text" id="nomeJogador" placeholder="Nome" required>
+        
+        <label for="posicaoJogador">Posição:</label>
+        <select id="posicaoJogador" required>
+            <option value="">Selecione uma Posição</option>
+            <option value="Primeira Base">Primeira Base</option>
+            <option value="Segunda Base">Segunda Base</option>
+            <option value="Terceira Base">Terceira Base</option>
+            <option value="Interbases">Interbases (Shortstop)</option>
+            <option value="Arremessador">Arremessador (Pitcher)</option>
+            <option value="Receptor">Receptor (Catcher)</option>
+            <option value="Campo Esquerdo">Campo Esquerdo</option>
+            <option value="Campo Central">Campo Central</option>
+            <option value="Campo Direito">Campo Direito</option>
+        </select>
+
+        <input type="number" id="numeroJogador" placeholder="Número" required>
+        <button type="submit">Adicionar Jogador</button>
+    </form>
+    <!-- Tabela exibindo a lista de jogadores -->
+    <table id="tabelaJogadores">
+        <thead>
+            <tr><th>Nome</th><th>Posição</th><th>Número</th><th>Ações</th></tr>
+        </thead>
+        <tbody>
+            <!-- Linhas de jogadores inseridas dinamicamente -->
+        </tbody>
+    </table>
+</section>
+
 
   <section id="jogos">
     <h2>Jogos</h2>
-    <p>Confira em breve os próximos confrontos do Black Panther Baseball!</p>
+    <form id="formJogos" onsubmit="adicionarJogo(event)">
+      <input type="date" id="dataJogo" required>
+      <input type="text" id="adversarioJogo" placeholder="Adversário" required>
+      <input type="text" id="resultadoJogo" placeholder="Resultado" required>
+      <button type="submit">Adicionar Jogo</button>
+    </form>
+    <table id="tabelaJogos">
+      <thead>
+        <tr><th>Data</th><th>Adversário</th><th>Resultado</th><th>Ações</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
   </section>
 
   <section id="estatisticas">
     <h2>Estatísticas</h2>
-    <p>As estatísticas da temporada serão atualizadas em breve.</p>
+    <form id="formEstatisticas" onsubmit="adicionarEstatistica(event)">
+      <input type="text" id="descricaoEstatistica" placeholder="Descrição" required>
+      <input type="number" id="valorEstatistica" placeholder="Valor" required>
+      <button type="submit">Adicionar Estatística</button>
+    </form>
+    <table id="tabelaEstatisticas">
+      <thead>
+        <tr><th>Estatística</th><th>Valor</th><th>Ações</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
   </section>
 
   <section id="noticias">
     <h2>Notícias</h2>
-    <p>Fique ligado nas últimas novidades sobre o time!</p>
+    <form id="formNoticias" onsubmit="adicionarNoticia(event)">
+      <input type="text" id="tituloNoticia" placeholder="Título" required>
+      <textarea id="conteudoNoticia" placeholder="Conteúdo" required></textarea>
+      <button type="submit">Adicionar Notícia</button>
+    </form>
+    <table id="tabelaNoticias">
+      <thead>
+        <tr><th>Título</th><th>Conteúdo</th><th>Data</th><th>Ações</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
   </section>
 
   <section id="contato">
     <h2>Contato</h2>
-    <p>Telefone: <strong>+55 (11) 99901-6677</strong></p>
+    <p>Siga-nos nas redes sociais:</p>
+    <ul class="redes">
+        <li><a href="#" target="_blank">Facebook</a></li>
+        <li><a href="#" target="_blank">Instagram</a></li>
+        <li><a href="#" target="_blank">Twitter</a></li>
+    </ul>
 
-    <div class="redes">
-      <a href="https://instagram.com/" target="_blank" class="btn instagram">Instagram</a>
-      <a href="https://facebook.com/" target="_blank" class="btn facebook">Facebook</a>
-      <a href="https://tiktok.com/" target="_blank" class="btn tiktok">TikTok</a>
-    </div>
+    <!-- Link de telefone direto -->
+    <p>Telefone: <a href="tel:+5511999016677">+55 (11) 99901-6677</a></p>
   </section>
 
   <footer>
-    © 2025 Black Panther Baseball. Todos os direitos reservados.
+    <p>&copy; 2025 Black Panther Baseball</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
