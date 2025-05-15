@@ -5,12 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Black Panther Baseball</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
   <header>
     <h1>Black Panther Baseball</h1>
   </header>
+
+  <section id="mensagem-institucional" class="mensagem-institucional">
+    <p>
+      O Black Panther Baseball convida você a fazer parte desta família. Somos uma equipe de beisebol amadora, que engloba desde praticantes iniciantes até veteranos. Oferecemos a oportunidade da prática esportiva que contribui para a saúde mental e física. <br>
+      Entre em contato para mais informações e venha fazer parte deste maravilhoso esporte.
+    </p>
+  </section>
 
   <nav>
     <ul>
@@ -19,6 +27,12 @@
       <li><a href="#jogos">Jogos</a></li>
       <li><a href="#estatisticas">Estatísticas</a></li>
       <li><a href="#noticias">Notícias</a></li>
+      <li><a href="#quem-somos"><i class="fas fa-users"></i> Quem Somos</a></li>
+      <li><a href="#onde-treinar"><i class="fas fa-map-marker-alt"></i> Onde Vamos Treinar</a></li>
+      <li><a href="#mensalidades"><i class="fas fa-money-bill-wave"></i> Mensalidades</a></li>
+      <li><a href="#quem-pode"><i class="fas fa-user-check"></i> Quem Pode Participar</a></li>
+      <li><a href="#torneios"><i class="fas fa-trophy"></i> Torneios</a></li>
+      <li><a href="#comentarios"><i class="fas fa-comments"></i> Comentários</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
   </nav>
@@ -27,19 +41,19 @@
     <h2>Líderes do Time</h2>
     <div class="lideres-container">
       <div class="lider">
-        <img src="images/ramon.jpg/WhatsApp Image 2025-05-13 at 23.12.52.png" alt="Ramon" class="lider-img">
+        <img src="images/ramon.jpg/" alt="Ramon" class="lider-img">
         <p><strong>Ramon</strong><br>Líder</p>
       </div>
       <div class="lider">
-        <img src="images/miguel/WhatsApp Image 2025-05-13 at 22.56.54.png" alt="Miguel" class="lider-img">
+        <img src="images/miguel/" alt="Miguel" class="lider-img">
         <p><strong>Miguel</strong><br>Líder</p>
       </div>
       <div class="lider">
-        <img src="images/wilber/WhatsApp Image 2025-05-13 at 22.56.54 (1).png" alt="Wilber" class="lider-img">
+        <img src="images/wilber/" alt="Wilber" class="lider-img">
         <p><strong>Wilber</strong><br>Líder</p>
       </div>
       <div class="lider">
-        <img src="images/angel/WhatsApp Image 2025-05-13 at 22.57.08.png" alt="Angel" class="lider-img">
+        <img src="images/angel/" alt="Angel" class="lider-img">
         <p><strong>Angel</strong><br>Controlador das Redes e Sistema</p>
       </div>
     </div>
@@ -126,16 +140,49 @@
     </table>
   </section>
 
-  <section id="contato">
-    <h2>Contato</h2>
+  <section id="quem-somos">
+    <h2><i class="fas fa-users"></i> Quem Somos</h2>
+    <p>Somos o Black Panther Baseball, uma equipe formada por apaixonados pelo esporte que valorizam amizade, respeito e crescimento em equipe.</p>
+  </section>
+  
+  <section id="onde-treinar">
+    <h2><i class="fas fa-map-marker-alt"></i> Onde Vamos Treinar</h2>
+    <p>Ainda por definir.</p>
+  </section>
+  
+  <section id="mensalidades">
+    <h2><i class="fas fa-money-bill-wave"></i> Mensalidades</h2>
+    <p>A mensalidade é de apenas <strong>R$ 50,00</strong>, que ajuda na manutenção de materiais e infraestrutura dos treinos.</p>
+  </section>
+  
+  <section id="quem-pode">
+    <h2><i class="fas fa-user-check"></i> Quem Pode Participar</h2>
+    <p>Todos são bem-vindos! Desde iniciantes até veteranos, basta ter vontade de aprender e jogar!</p>
+  </section>
+  
+  <section id="torneios">
+    <h2><i class="fas fa-trophy"></i> Torneios</h2>
+    <p>Participamos de torneios locais e promovendo integração e competitividade saudável entre as equipes.</p>
+  </section>
+  
+  <section id="comentarios">
+    <h2>Comentários dos Treinos</h2>
+    <form id="formComentarios" onsubmit="adicionarComentario(event)">
+      <input type="text" id="nomeComentario" placeholder="Seu nome" required>
+      <textarea id="textoComentario" placeholder="O que achou dos treinos?" required></textarea>
+      <button type="submit">Enviar Comentário</button>
+    </form>
+    <div id="listaComentarios"></div>
+  </section>
+
+  <section id="contatos">
+    <h2>contatos</h2>
     <p>Siga-nos nas redes sociais:</p>
     <ul class="redes">
-        <li><a href="#" target="_blank">Facebook</a></li>
-        <li><a href="#" target="_blank">Instagram</a></li>
-        <li><a href="#" target="_blank">Twitter</a></li>
+      <li><a href="#" target="_blank"><i class="fab fa-Facebook"></i> Facebook</a></li>
+      <li><a href="#" target="_blank"><i class="fab fa-Instagram"></i> Instagram</a></li>
+      <li><a href="#" target="_blank"><i class="fab fa-TikTok"></i> TikTok</a></li>
     </ul>
-
-    <!-- Link de telefone direto -->
     <p>Telefone: <a href="tel:+5511999016677">+55 (11) 99901-6677</a></p>
   </section>
 
