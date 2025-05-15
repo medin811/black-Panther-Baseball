@@ -1,29 +1,42 @@
+/* Fonte padrão e cores base */
 body {
-  font-family: Arial, sans-serif;
-  background: #111;
-  color: #f5f5f5;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
   margin: 0;
   padding: 0;
 }
 
+/* Cabeçalho */
 header {
   background-color: #000;
-  padding: 20px;
+  color: gold;
   text-align: center;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(255, 215, 0, 0.2);
+}
+
+h1, h2 {
   color: gold;
 }
 
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  background-color: #222;
-  padding: 10px;
-  margin: 0;
+/* Navegação */
+nav {
+  background-color: #1e1e1e;
+  border-bottom: 2px solid gold;
 }
 
-nav ul li {
-  margin: 0 15px;
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0.5rem 1rem;
 }
 
 nav a {
@@ -32,79 +45,179 @@ nav a {
   font-weight: bold;
 }
 
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Seções */
 section {
-  padding: 20px;
+  padding: 2rem;
+  border-bottom: 1px solid #333;
 }
 
-h2 {
-  color: gold;
-  border-bottom: 2px solid gold;
-  padding-bottom: 5px;
-}
-
+/* Líderes */
 .lideres-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.lider {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
   text-align: center;
 }
 
-.lider img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid gold;
-  margin-bottom: 10px;
-}
-
-.redes li {
-  display: inline-block;
-  margin: 5px;
-}
-
-.redes a {
-  color: white;
-  background-color: #444;
-  padding: 8px 12px;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-table {
+.lider-img {
   width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
+  max-width: 160px;
+  border-radius: 50%;
+  border: 3px solid gold;
+  margin-bottom: 0.5rem;
 }
 
-th, td {
-  padding: 10px;
-  border: 1px solid #444;
-  text-align: center;
+/* Formulários */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
 }
 
-input, textarea, button {
-  margin: 5px;
-  padding: 8px;
+input, select, textarea, button {
+  padding: 0.6rem;
   border-radius: 5px;
   border: none;
+  font-size: 1rem;
+}
+
+input, select, textarea {
+  background-color: #2a2a2a;
+  color: #fff;
 }
 
 button {
   background-color: gold;
-  color: black;
+  color: #000;
   font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #e6c200;
+}
+
+/* Tabelas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #1b1b1b;
+}
+
+th, td {
+  border: 1px solid #333;
+  padding: 0.8rem;
+  text-align: left;
+}
+
+th {
+  background-color: #222;
+  color: gold;
+}
+
+/* Redes sociais */
+.redes {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.redes li a {
+  color: gold;
+  font-weight: bold;
+}
+
+/* Rodapé */
+footer {
+  background-color: #000;
+  color: #888;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Responsividade extra */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  input, select, textarea {
+    width: 100%;
+  }
+}
+
+/* Animações suaves */
+section, header, footer {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Botões com efeito */
+button {
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.mensagem-institucional {
+  background-color: #222;
+  color: #ffd700;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  border-bottom: 2px solid #444;
+}
+
+section {
+  margin: 40px 20px;
+}
+
+section h2 {
+  color: #ffd700;
+  border-bottom: 1px solid #ffd700;
+}
+
+#formComentarios input,
+#formComentarios textarea {
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+#formComentarios button {
+  background-color: #ffd700;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
 }
 
-footer {
-  background-color: #000;
-  text-align: center;
-  color: #aaa;
-  padding: 15px;
+#listaComentarios {
+  margin-top: 20px;
 }
 
