@@ -49,3 +49,5 @@ function adicionarJogador(e) {
     e.target.reset();
   }
   
+
+  
