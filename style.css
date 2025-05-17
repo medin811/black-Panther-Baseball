@@ -1,223 +1,123 @@
-/* Fonte padrão e cores base */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #121212;
-  color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  background-color: #0b0b0b;
+  color: #e0e0ff;
   margin: 0;
   padding: 0;
 }
 
-/* Cabeçalho */
 header {
-  background-color: #000;
-  color: gold;
+  background-color: #4b0082;
+  padding: 20px;
   text-align: center;
-  padding: 1rem 0;
-  box-shadow: 0 2px 5px rgba(255, 215, 0, 0.2);
+  color: #fff;
 }
 
-h1, h2 {
-  color: gold;
-}
-
-/* Navegação */
 nav {
-  background-color: #1e1e1e;
-  border-bottom: 2px solid gold;
+  background-color: #1a1a1a;
 }
 
 nav ul {
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-nav li {
-  margin: 0.5rem 1rem;
+nav ul li {
+  margin: 5px;
 }
 
-nav a {
-  color: gold;
+nav ul li a {
+  color: #e0e0ff;
+  padding: 10px 15px;
   text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Seções */
-section {
-  padding: 2rem;
-  border-bottom: 1px solid #333;
-}
-
-/* Líderes */
-.lideres-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
-  text-align: center;
-}
-
-.lider-img {
-  width: 100%;
-  max-width: 160px;
-  border-radius: 50%;
-  border: 3px solid gold;
-  margin-bottom: 0.5rem;
-}
-
-/* Formulários */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-  margin-bottom: 1rem;
-}
-
-input, select, textarea, button {
-  padding: 0.6rem;
+  display: block;
   border-radius: 5px;
-  border: none;
-  font-size: 1rem;
-}
-
-input, select, textarea {
-  background-color: #2a2a2a;
-  color: #fff;
-}
-
-button {
-  background-color: gold;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
+  background-color: #4b0082;
   transition: background 0.3s;
 }
 
-button:hover {
-  background-color: #e6c200;
-}
-
-/* Tabelas */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-  background-color: #1b1b1b;
-}
-
-th, td {
-  border: 1px solid #333;
-  padding: 0.8rem;
-  text-align: left;
-}
-
-th {
-  background-color: #222;
-  color: gold;
-}
-
-/* Redes sociais */
-.redes {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.redes li a {
-  color: gold;
-  font-weight: bold;
-}
-
-/* Rodapé */
-footer {
-  background-color: #000;
-  color: #888;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-
-/* Responsividade extra */
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  form {
-    width: 100%;
-  }
-
-  input, select, textarea {
-    width: 100%;
-  }
-}
-
-/* Animações suaves */
-section, header, footer {
-  animation: fadeIn 1s ease-in;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Botões com efeito */
-button {
-  transition: transform 0.2s ease;
-}
-
-button:hover {
-  transform: scale(1.05);
-}
-
-.mensagem-institucional {
-  background-color: #222;
-  color: #ffd700;
-  padding: 20px;
-  text-align: center;
-  font-size: 1.2em;
-  border-bottom: 2px solid #444;
+nav ul li a:hover {
+  background-color: #6a0dad;
 }
 
 section {
-  margin: 40px 20px;
+  padding: 20px;
 }
 
-section h2 {
-  color: #ffd700;
-  border-bottom: 1px solid #ffd700;
+h2 {
+  color: #caaeff;
 }
 
-#formComentarios input,
-#formComentarios textarea {
+form input, form select, form textarea, form button {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
   width: 100%;
-  margin: 5px 0;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
+  max-width: 400px;
 }
 
-#formComentarios button {
-  background-color: #ffd700;
-  color: #000;
-  padding: 10px 20px;
+form button {
+  background-color: #4b0082;
+  color: white;
   border: none;
-  border-radius: 10px;
   cursor: pointer;
 }
 
-#listaComentarios {
-  margin-top: 20px;
+form button:hover {
+  background-color: #6a0dad;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+table, th, td {
+  border: 1px solid #4b0082;
+  text-align: left;
+  padding: 10px;
+}
+
+footer {
+  background-color: #1a1a1a;
+  text-align: center;
+  padding: 10px;
+  color: #999;
+}
+
+.lideres-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.lider {
+  text-align: center;
+  flex: 1;
+}
+
+.lider-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4b0082;
+}
+
+.redes a {
+  color: #e0e0ff;
+  text-decoration: none;
+}
+
+.redes a:hover {
+  text-decoration: underline;
+}
+
 
