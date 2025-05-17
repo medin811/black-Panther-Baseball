@@ -28,12 +28,12 @@
       <li><a href="#estatisticas">Estatísticas</a></li>
       <li><a href="#noticias">Notícias</a></li>
       <li><a href="#quem-somos"><i class="fas fa-users"></i> Quem Somos</a></li>
-      <li><a href="#onde-treinar"><i class="fas fa-map-marker-alt"></i> Onde Vamos Treinar</a></li>
+      <li><a href="#Local e Horario "><i class="fas fa-map-marker-alt"></i> Local e Horario</a></li>
       <li><a href="#mensalidades"><i class="fas fa-money-bill-wave"></i> Mensalidades</a></li>
       <li><a href="#quem-pode"><i class="fas fa-user-check"></i> Quem Pode Participar</a></li>
       <li><a href="#torneios"><i class="fas fa-trophy"></i> Torneios</a></li>
       <li><a href="#comentarios"><i class="fas fa-comments"></i> Comentários</a></li>
-      <li><a href="#contato">Contato</a></li>
+      <li><a href="#contatos"><i class="fas fa-phone-alt"></i> Contato</a></li>
     </ul>
   </nav>
 
@@ -41,19 +41,19 @@
     <h2>Líderes do Time</h2>
     <div class="lideres-container">
       <div class="lider">
-        <img src="images/ramon.jpg/" alt="Ramon" class="lider-img">
+        <img src="images/ramon.jpg" alt="Ramon" class="lider-img">
         <p><strong>Ramon</strong><br>Líder</p>
       </div>
       <div class="lider">
-        <img src="images/miguel/" alt="Miguel" class="lider-img">
+        <img src="images/miguel.jpg" alt="Miguel" class="lider-img">
         <p><strong>Miguel</strong><br>Líder</p>
       </div>
       <div class="lider">
-        <img src="images/wilber/" alt="Wilber" class="lider-img">
+        <img src="images/wilber.jpg" alt="Wilber" class="lider-img">
         <p><strong>Wilber</strong><br>Líder</p>
       </div>
       <div class="lider">
-        <img src="images/angel/" alt="Angel" class="lider-img">
+        <img src="images/angel.jpg" alt="Angel" class="lider-img">
         <p><strong>Angel</strong><br>Controlador das Redes e Sistema</p>
       </div>
     </div>
@@ -61,38 +61,34 @@
 
   <section id="jogadores">
     <h2>Jogadores</h2>
-    <!-- Formulário para adicionar jogador -->
     <form id="formJogadores" onsubmit="adicionarJogador(event)">
-        <input type="text" id="nomeJogador" placeholder="Nome" required>
-        
-        <label for="posicaoJogador">Posição:</label>
-        <select id="posicaoJogador" required>
-            <option value="">Selecione uma Posição</option>
-            <option value="Primeira Base">Primeira Base</option>
-            <option value="Segunda Base">Segunda Base</option>
-            <option value="Terceira Base">Terceira Base</option>
-            <option value="Interbases">Interbases (Shortstop)</option>
-            <option value="Arremessador">Arremessador (Pitcher)</option>
-            <option value="Receptor">Receptor (Catcher)</option>
-            <option value="Campo Esquerdo">Campo Esquerdo</option>
-            <option value="Campo Central">Campo Central</option>
-            <option value="Campo Direito">Campo Direito</option>
-        </select>
+      <input type="text" id="nomeJogador" placeholder="Nome" required>
+      
+      <label for="posicaoJogador">Posição:</label>
+      <select id="posicaoJogador" required>
+        <option value="">Selecione uma Posição</option>
+        <option value="Primeira Base">Primeira Base</option>
+        <option value="Segunda Base">Segunda Base</option>
+        <option value="Terceira Base">Terceira Base</option>
+        <option value="Interbases">Interbases (Shortstop)</option>
+        <option value="Arremessador">Arremessador (Pitcher)</option>
+        <option value="Receptor">Receptor (Catcher)</option>
+        <option value="Campo Esquerdo">Campo Esquerdo</option>
+        <option value="Campo Central">Campo Central</option>
+        <option value="Campo Direito">Campo Direito</option>
+      </select>
 
-        <input type="number" id="numeroJogador" placeholder="Número" required>
-        <button type="submit">Adicionar Jogador</button>
+      <input type="number" id="numeroJogador" placeholder="Número" required>
+      <button type="submit">Adicionar Jogador</button>
     </form>
-    <!-- Tabela exibindo a lista de jogadores -->
-    <table id="tabelaJogadores">
-        <thead>
-            <tr><th>Nome</th><th>Posição</th><th>Número</th><th>Ações</th></tr>
-        </thead>
-        <tbody>
-            <!-- Linhas de jogadores inseridas dinamicamente -->
-        </tbody>
-    </table>
-</section>
 
+    <table id="tabelaJogadores">
+      <thead>
+        <tr><th>Nome</th><th>Posição</th><th>Número</th><th>Ações</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
 
   <section id="jogos">
     <h2>Jogos</h2>
@@ -145,14 +141,16 @@
     <p>Somos o Black Panther Baseball, uma equipe formada por apaixonados pelo esporte que valorizam amizade, respeito e crescimento em equipe.</p>
   </section>
   
-  <section id="onde-treinar">
-    <h2><i class="fas fa-map-marker-alt"></i> Onde Vamos Treinar</h2>
-    <p>Ainda por definir.</p>
+  <section id="Local e Horario">
+    <h2><i class="fas fa-map-marker-alt"></i> Local e Horario</h2>
+    <p>Parque Ecológico do Tietê, ao lado da rampa de acesso à estação Engenheiro Goulart da CPTM.Aos
+        sábados às 13:30hs</p>
   </section>
   
   <section id="mensalidades">
     <h2><i class="fas fa-money-bill-wave"></i> Mensalidades</h2>
-    <p>A mensalidade é de apenas <strong>R$ 50,00</strong>, que ajuda na manutenção de materiais e infraestrutura dos treinos.</p>
+    <p>A mensalidade é de apenas <strong>R$ 60,00</strong>. pagamento até dia 15
+    A mensalidade dá o direito de associar-se ao BlackPanther e ter acesso a vários benefícios.</p>
   </section>
   
   <section id="quem-pode">
@@ -162,11 +160,11 @@
   
   <section id="torneios">
     <h2><i class="fas fa-trophy"></i> Torneios</h2>
-    <p>Participamos de torneios locais e promovendo integração e competitividade saudável entre as equipes.</p>
+    <p> Campeonatos amadores regulares, amistosos, e torneios isolados.</p>
   </section>
   
   <section id="comentarios">
-    <h2>Comentários dos Treinos</h2>
+    <h2><i class="fas fa-comments"></i> Comentários dos Treinos</h2>
     <form id="formComentarios" onsubmit="adicionarComentario(event)">
       <input type="text" id="nomeComentario" placeholder="Seu nome" required>
       <textarea id="textoComentario" placeholder="O que achou dos treinos?" required></textarea>
@@ -176,13 +174,19 @@
   </section>
 
   <section id="contatos">
-    <h2>contatos</h2>
+    <h2><i class="fas fa-phone-alt"></i> Contatos</h2>
     <p>Siga-nos nas redes sociais:</p>
+    
     <ul class="redes">
-      <li><a href="#" target="_blank"><i class="fab fa-Facebook"></i> Facebook</a></li>
-      <li><a href="#" target="_blank"><i class="fab fa-Instagram"></i> Instagram</a></li>
-      <li><a href="#" target="_blank"><i class="fab fa-TikTok"></i> TikTok</a></li>
-    </ul>
+  <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a> </li>
+  <li>
+    <a href="https://www.instagram.com/blackpanther.baseball?utm_source=qr&igsh=YzU0YjFjMzBvcHBp" target="_blank">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+  </li>
+  <li><a href="#"><i class="fab fa-tiktok"></i> TikTok</a></li>
+</ul>
+
     <p>Telefone: <a href="tel:+5511999016677">+55 (11) 99901-6677</a></p>
   </section>
 
@@ -191,5 +195,9 @@
   </footer>
 
   <script src="script.js"></script>
+
+  
+</script>
+
 </body>
-</html>
+</html>  
