@@ -34,20 +34,34 @@ function adicionarEstatistica(event) {
   row.innerHTML = `<td>${descricao}</td><td>${valor}</td><td><button onclick="this.closest('tr').remove()">Remover</button></td>`;
 
   event.target.reset();
-}
 
-function adicionarNoticia(event) {
+  function adicionarNoticia(event) {
   event.preventDefault();
+
   const titulo = document.getElementById('tituloNoticia').value;
+  const tema = document.getElementById('temaNoticia').value;
   const conteudo = document.getElementById('conteudoNoticia').value;
   const data = new Date().toLocaleDateString();
 
   const tabela = document.getElementById('tabelaNoticias').querySelector('tbody');
-  const row = tabela.insertRow();
-  row.innerHTML = `<td>${titulo}</td><td>${conteudo}</td><td>${data}</td><td><button onclick="this.closest('tr').remove()">Remover</button></td>`;
+  const novaLinha = tabela.insertRow();
 
-  event.target.reset();
+  novaLinha.innerHTML = `
+    <td>${titulo}</td>
+    <td>${tema}</td>
+    <td>${conteudo}</td>
+    <td>${data}</td>
+    <td><button onclick="removerNoticia(this)">Remover</button></td>
+  `;
+
+  document.getElementById('formNoticias').reset();
 }
+
+function removerNoticia(botao) {
+  const linha = botao.parentElement.parentElement;
+  linha.remove();
+}
+
 
 function adicionarComentario(event) {
   event.preventDefault();
