@@ -121,20 +121,37 @@
     </table>
   </section>
 
-  <section id="noticias">
-    <h2>Notícias</h2>
-    <form id="formNoticias" onsubmit="adicionarNoticia(event)">
-      <input type="text" id="tituloNoticia" placeholder="Título" required>
-      <textarea id="conteudoNoticia" placeholder="Conteúdo" required></textarea>
-      <button type="submit">Adicionar Notícia</button>
-    </form>
-    <table id="tabelaNoticias">
-      <thead>
-        <tr><th>Título</th><th>Conteúdo</th><th>Data</th><th>Ações</th></tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </section>
+   <section id="noticias">
+  <h2>Notícias</h2>
+  <form id="formNoticias" onsubmit="adicionarNoticia(event)">
+    <input type="text" id="tituloNoticia" placeholder="Título" required>
+    
+    <select id="temaNoticia" required>
+      <option value="" disabled selected>Escolha o tema</option>
+      <option value="Esporte">Esporte</option>
+      <option value="Evento">Evento</option>
+      <option value="Treinamento">Treinamento</option>
+      <option value="Campeonato">Campeonato</option>
+      <option value="Comunicado">Comunicado</option>
+    </select>
+
+    <textarea id="conteudoNoticia" placeholder="Conteúdo" required></textarea>
+    <button type="submit">Adicionar Notícia</button>
+  </form>
+
+  <table id="tabelaNoticias">
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Tema</th>
+        <th>Conteúdo</th>
+        <th>Data</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
 
   <section id="quem-somos">
     <h2><i class="fas fa-users"></i> Quem Somos</h2>
